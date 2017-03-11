@@ -1,0 +1,2 @@
+# IsPowerOfTwoSample
+IsPowerOfTwo Sample
