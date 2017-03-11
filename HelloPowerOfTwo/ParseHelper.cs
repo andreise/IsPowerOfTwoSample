@@ -7,9 +7,11 @@ namespace HelloPowerOfTwo
     static class ParseHelper
     {
 
-        private static int ParseInt32Internal(string s, NumberStyles style) => int.Parse(s, style, NumberFormatInfo.InvariantInfo);
+        private static IFormatProvider FormatProvider => NumberFormatInfo.InvariantInfo;
 
-        public static int ParseInt32(string s) => int.Parse(s, NumberFormatInfo.InvariantInfo);
+        private static int ParseInt32Internal(string s, NumberStyles style) => int.Parse(s, style, FormatProvider);
+
+        public static int ParseInt32(string s) => int.Parse(s, FormatProvider); // NumberStyles.Integer used by default
 
         public static int ParseNonnegativeInt32(string s) => ParseInt32Internal(s, NumberStyles.Integer & ~NumberStyles.AllowLeadingSign);
 
