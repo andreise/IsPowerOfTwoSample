@@ -27,7 +27,7 @@ namespace HelloPowerOfTwo
                     continue;
 
                 var number = TryParseNonnegativeInt32(input);
-                if (!number.HasValue)
+                if (number is null)
                     continue;
 
                 WriteLine(
