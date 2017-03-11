@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 using static System.FormattableString;
-using static Common.MathHelper;
+using static Common.Math.MathHelper;
 
 namespace HelloPowerOfTwo
 {
