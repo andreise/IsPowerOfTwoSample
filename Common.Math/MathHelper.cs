@@ -16,7 +16,6 @@ namespace Common.Math
         /// </summary>
         /// <param name="value">An unsigned 32-bit integer value</param>
         /// <returns>Returns true if the value is a power of two, otherwise returns false</returns>
-        /// <remarks>Must be marked as non-public for CLS-compliant class</remarks>
         public static bool IsPowerOfTwo(uint value) => (value & unchecked(value - 1)) == 0 && value > 0;
 
         /// <summary>
@@ -24,7 +23,6 @@ namespace Common.Math
         /// </summary>
         /// <param name="value">An unsigned 64-bit integer value</param>
         /// <returns>Returns true if the value is a power of two, otherwise returns false</returns>
-        /// <remarks>Must be marked as non-public for CLS-compliant class</remarks>
         public static bool IsPowerOfTwo(ulong value) => (value & unchecked(value - 1)) == 0 && value > 0;
 
         /// <summary>
